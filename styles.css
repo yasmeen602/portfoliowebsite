@@ -1,0 +1,785 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Navigation */
+  header nav {
+    background: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 1.5rem;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #6a11cb;
+  }
+  
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #6a11cb;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+  }
+  
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 4rem 2rem;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  p {
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Home Section */
+  #home {
+    background: linear-gradient(-120deg, red, cyan, blue);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    /* linear-gradient(to right, #6a11cb, #2575fc); */
+  }
+  
+  #home img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 2rem 0;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .cta {
+    display: inline-block;
+    background: #6a11cb;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .cta:hover {
+    background: #2575fc;
+    transform: translateY(-3px);
+  }
+  
+ /* About Section */
+#about, section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Roboto', sans-serif;
+
+    margin: 50px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+  
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-details {
+  flex: 2 1 500px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.about-details .intro {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.about-details .description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-details h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background: #0056b3;
+}
+
+  
+
+
+ /* Projects Section */
+#projects {
+  background: #f4f4f4;
+  padding: 2rem 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns in a row */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card:nth-child(4) {
+  grid-column: 1 / 2; /* Moves Project 4 to the first column of second row */
+}
+
+.project-card:nth-child(5) {
+  grid-column: 2 / 3; /* Moves Project 5 next to Project 4 */
+}
+
+
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-card h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project-card p {
+  margin: 0 1rem 1rem;
+  font-size: 1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+  
+  /* Contact Section */
+  #contact {
+    background: #fff;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  form input, form textarea, form button {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #6a11cb;
+    outline: none;
+  }
+  
+  form button {
+    background: #6a11cb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background: #2575fc;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  /* Courses Section Styling */
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.course-card {
+  background: linear-gradient(-120deg, red, cyan, blue);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.course-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: contain;
+  animation: float 2s infinite;
+}
+
+.course-details h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.course-details p {
+  color: #ddd;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Floating Animation for Icons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/* Certifications Section Styling */
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.certification-card {
+  background:linear-gradient(-120deg, red, cyan, blue);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.certification-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: contain;
+  animation: float 2s infinite;
+}
+
+.certification-details h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.certification-details p {
+  color: #ddd;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Floating Animation for Icons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Achievements Section Styling */
+.achievement-card {
+  display: flex;
+  align-items: center;
+  background:linear-gradient(-120deg, red, cyan, blue);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-icon img {
+  width: 50px;
+  border-radius: 25px;
+  height: 50px;
+  margin-right: 15px;
+  animation: float 2s infinite;
+}
+
+.achievement-details h4 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0;
+}
+.achievement-details,h2{
+  color: #2575fc;
+}
+.achievement-details p {
+  font-size: 0.9rem;
+  color: #eee;
+  margin: 0;
+}
+
+/* Education section styling */
+#education {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#education h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  
+}
+
+.education-card {
+  background: #fff;
+  border-radius: 10px;
+  background:linear-gradient(-120deg, red, cyan, blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-icon img {
+  width: 60px;
+  border-radius: 30px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.education-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #eee ;
+}
+
+.education-details p {
+  font-size: 1rem;
+  color:  #eee;
+  margin: 5px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+/* footer */
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .column {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+footer .column h3 {
+  margin-bottom: 15px;
+}
+
+footer .column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .column ul li {
+  margin-bottom: 10px;
+}
+
+footer .column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .column ul li a:hover {
+  color: #00bcd4;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+footer .social-icons a {
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #00bcd4;
+}
+
+footer .newsletter input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 3px;
+}
+
+footer .newsletter button {
+  padding: 10px;
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+footer .newsletter button:hover {
+  background-color: #0196a6;
+}
+
+footer .back-to-top {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer .back-to-top a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .back-to-top a:hover {
+  text-decoration: underline;
+}
+
+/* Skills Section Container */
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers all cards horizontally */
+  gap: 20px; /* Adds space between cards */
+  padding: 20px;
+}
+
+.work-experience {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(-120deg, red, cyan, blue);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-experience {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.work-experience {
+  width: 50px;
+  border-radius: 25px;
+  height: 50px;
+  margin-right: 15px;
+  animation: float 2s infinite;
+}
+
+.work-experience h4{
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0;
+}
+.work-experience,h3, h2{
+  color: #2575fc;
+}
+.work-experience p {
+  font-size: 0.9rem;
+  color: #eee;
+  margin: 0;
+}
+
+
+
+/* Course Card */
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Styling for Graphic Designing Card */
+.course-card:last-child {
+  margin-top: 20px; /* Optional: To give it a little distinction */
+}
+
+
+/* Enhanced button with gradient */
+button, .cta-btn, form button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .cta-btn:hover, form button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+/* Smooth transition for hover effects */
+.course-card:hover, .project-card:hover, .certification-card:hover, .education-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Fade-In Animation */
+section {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive Design for Grid Layout */
+@media (max-width: 768px) {
+  .project-grid, .education-grid, .courses-container {
+    grid-template-columns: 1fr;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+/* Footer link hover effect */
+footer .column ul li a:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+/* Typography Improvements */
+/* Floating Animation for Course and Certification Cards */
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.course-card, .certification-card {
+  animation: floatCard 2s infinite;
+  
+}
